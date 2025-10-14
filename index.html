@@ -37,10 +37,27 @@
                 <h1 class="text-2xl font-bold text-amber-500">Consultório Renova Vitae</h1>
                 <p class="text-sm text-gray-600">por Nerisvaldo Freitas</p>
             </div>
+            <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#sobre" class="text-gray-600 hover:text-amber-500 font-semibold transition duration-300">Especialista</a>
                 <a href="#pilares" class="text-gray-600 hover:text-amber-500 font-semibold transition duration-300">Pilares</a>
                 <a href="#atendimento" class="text-gray-600 hover:text-amber-500 font-semibold transition duration-300">Atendimento</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-gray-600 hover:text-amber-500 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#sobre" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-500">Especialista</a>
+                <a href="#pilares" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-500">Pilares</a>
+                <a href="#atendimento" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-500">Atendimento</a>
             </nav>
         </div>
     </header>
@@ -205,62 +222,7 @@
         </svg>
     </a>
 
-    <script>
-        const numeroWhatsapp = "556198075609"; // <-- ADICIONE O NÚMERO AQUI
-
-        const linkWhatsapp = `https://wa.me/${numeroWhatsapp}`;
-        const botoesWhatsapp = document.querySelectorAll('.whatsapp-button');
-        
-        botoesWhatsapp.forEach(botao => {
-            botao.href = linkWhatsapp;
-            // Para abrir em uma nova aba
-            botao.target = '_blank';
-        });
-
-        // Lógica do Carrossel de Imagens
-        const carouselImages = document.querySelectorAll('.carousel-image');
-        let currentImageIndex = 0;
-        const slideInterval = 4000; // Tempo de troca em milissegundos (4 segundos)
-
-        function showNextImage() {
-            // Esconde a imagem atual
-            carouselImages[currentImageIndex].classList.remove('opacity-100');
-            carouselImages[currentImageIndex].classList.add('opacity-0');
-
-            // Calcula o índice da próxima imagem
-            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-
-            // Mostra a próxima imagem
-            carouselImages[currentImageIndex].classList.remove('opacity-0');
-            carouselImages[currentImageIndex].classList.add('opacity-100');
-        }
-
-        setInterval(showNextImage, slideInterval);
-
-        // Lógica para animação ao rolar a página
-        const sectionsToAnimate = document.querySelectorAll('.fade-in-section');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1 // A animação começa quando 10% do elemento está visível
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Anima só uma vez
-                }
-            });
-        }, observerOptions);
-
-        sectionsToAnimate.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
-
-
 

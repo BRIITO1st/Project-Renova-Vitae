@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para o seu arquivo CSS -->
     <link rel="stylesheet" href="style.css">
     <style>
         html {
@@ -186,15 +187,18 @@
      <!-- Modalidade de Atendimento -->
     <section id="atendimento" class="py-16 md:py-24 bg-amber-50 fade-in-section">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold text-gray-800 mb-4">Atendimento Online</h3>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Flexibilidade e segurança para o seu cuidado, de onde você estiver.</p>
-            <div class="flex justify-center">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Modalidades de Atendimento</h3>
+            <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">Cuidado e flexibilidade para sua jornada, seja online ou presencial.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Atendimento Presencial -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-left">
+                    <h4 class="text-2xl font-semibold mb-2 text-amber-700">Atendimento Presencial</h4>
+                    <p class="text-gray-600">Um ambiente tranquilo e preparado para recebê-lo com todo o conforto e privacidade em nosso consultório.</p>
+                </div>
                 <!-- Atendimento Online -->
-                <div class="md:w-2/3 lg:w-1/2">
-                     <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
-                        <h4 class="text-2xl font-semibold mb-2 text-green-700">Sessões por Videochamada</h4>
-                        <p class="text-gray-600">Realize sua sessão com a mesma qualidade e sigilo do atendimento tradicional, com a praticidade de não precisar sair de casa.</p>
-                    </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-left">
+                    <h4 class="text-2xl font-semibold mb-2 text-green-700">Atendimento Online</h4>
+                    <p class="text-gray-600">Realize sua sessão com a mesma qualidade e sigilo do atendimento tradicional, com a praticidade de não precisar sair de casa.</p>
                 </div>
             </div>
             <p class="mt-12 text-xl text-gray-700">Dê o primeiro passo para renovar suas esperanças.</p>
@@ -224,4 +228,5 @@
     <script src="script.js" defer></script>
 </body>
 </html>
+
 

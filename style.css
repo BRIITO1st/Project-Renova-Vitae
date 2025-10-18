@@ -1,11 +1,28 @@
-/* Define a fonte principal para todo o site */
-body {
-    font-family: 'Inter', sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Estilo para a imagem de fundo da seção principal com uma sobreposição de cor */
 .hero-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 258, 0.8)), url('https://placehold.co/1920x1080/FBBF24/FFFFFF?text=Imagem+Acolhedora');
+    background-image: url('https://placehold.co/1200x600/FEF3C7/4B5563?text=Ambiente+Acolhedor');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
+
+/* Estilos para a animação de fade-in */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adiciona a cor laranja ao link do menu ativo */
+nav a.active {
+    color: #F59E0B; /* Cor amber-500 do Tailwind */
+}
+

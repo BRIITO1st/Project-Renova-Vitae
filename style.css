@@ -2,13 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.hero-bg {
-    background-image: url('https://placehold.co/1200x600/FEF3C7/4B5563?text=Ambiente+Acolhedor');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 /* Estilos para a animação de fade-in */
 .fade-in-section {
     opacity: 0;

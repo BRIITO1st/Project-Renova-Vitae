@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Lógica do Menu Hamburger
+    // Menu Hamburger
     function hamburgerMenuLogic() {
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!hamburgerButton || !mobileMenu) return;
 
-        // Abrir/Fechar o menu
+        // Abrir e Fechar o menu
         hamburgerButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Inicializa todas as funções ---
     whatsappButtonLogic();
-    heroCarouselLogic(); // <--- Nova função do carrossel principal
+    heroCarouselLogic(); 
     pilaresCarouselLogic();
     scrollFadeInLogic();
     scrollSpyLogic();

@@ -14,8 +14,8 @@ html {
     transform: translateY(0);
 }
 
-/* Adiciona a cor laranja ao link do menu ativo */
+/* cor laranja ao link do menu ativo */
 nav a.active {
-    color: #F59E0B; /* Cor amber-500 do Tailwind */
+    color: #F59E0B; 
 }
 

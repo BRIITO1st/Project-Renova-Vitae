@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Lógica do Botão WhatsApp
+    // Botão WhatsApp
     function whatsappButtonLogic() {
         const whatsappButtons = document.querySelectorAll('.whatsapp-button');
-        const numeroWhatsapp = "550129430XXXX"; // <--! Altere para o número do seu tio (Ex: 5511999998888)
+        const numeroWhatsapp = "556198075609";
         const mensagemPadrao = encodeURIComponent("Olá, Dr. Nerisvaldo! Gostaria de agendar uma consulta.");
         const whatsappLink = `https://wa.me/${numeroWhatsapp}?text=${mensagemPadrao}`;
         
         whatsappButtons.forEach(button => {
             button.href = whatsappLink;
-            button.target = "_blank"; // Abre em nova aba
+            button.target = "_blank";
         });
     }
 
-    // Lógica do Carrossel da Seção Hero
+    // Carrossel da Seção Hero
     function heroCarouselLogic() {
         const carouselContainer = document.querySelector('#hero-carousel');
         if (!carouselContainer) return;
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (images.length === 0) return;
 
         let currentIndex = 0;
-        const intervalTime = 4000; // Troca a cada 4 segundos
+        const intervalTime = 4000;
 
         setInterval(() => {
             images[currentIndex].classList.remove('opacity-100');
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, intervalTime);
     }
 
-    // Lógica do Carrossel da Seção Pilares
+    // Carrossel da Seção Pilares
     function pilaresCarouselLogic() {
         const carouselContainer = document.querySelector('#pilares-carousel');
         if (!carouselContainer) return; // Se o carrossel não existir, para a função
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (images.length === 0) return; // Se não houver imagens, para a função
 
         let currentIndex = 0;
-        const intervalTime = 4000; // 4 segundos
+        const intervalTime = 4000;
 
         setInterval(() => {
             // Esconde a imagem atual
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, intervalTime);
     }
 
-    // Lógica para Animação de Fade-in ao Rolar
+    // Animação de Fade-in ao Rolar
     function scrollFadeInLogic() {
         const sections = document.querySelectorAll('.fade-in-section');
         if (!sections.length) return;
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Para de observar após animar
+                    observer.unobserve(entry.target); 
                 }
             });
         }, {
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Lógica para Destacar Menu Ativo (Scroll Spy)
+    // Destacaa Menu Ativo (Scroll Spy)
     function scrollSpyLogic() {
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav a[href^="#"]');

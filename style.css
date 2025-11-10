@@ -2,6 +2,17 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Compensa a altura do header fixo ao clicar nos links âncora */
+/* O header tem uma logo com h-40 (10rem/160px) + py-1 (0.5rem/8px) */
+#sobre,
+#pilares,
+#atendimento,
+#localizacao,
+#servicos { /* Adicionei #servicos também, embora não esteja no menu */
+    scroll-margin-top: 10.5rem; /* 168px */
+}
+
+
 /* Estilos para a animação de fade-in */
 .fade-in-section {
     opacity: 0;
@@ -14,8 +25,7 @@ html {
     transform: translateY(0);
 }
 
-/* cor laranja ao link do menu ativo */
+/* Adiciona a cor laranja ao link do menu ativo */
 nav a.active {
-    color: #F59E0B; 
+    color: #F59E0B; /* Cor amber-500 do Tailwind */
 }
-
